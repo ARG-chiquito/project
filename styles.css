@@ -1,0 +1,473 @@
+/* Custom Styles */
+
+/* Navbar Styles */
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+background: url(images/sabjiwala.png);
+border-radius: 50%;
+width: 150px;
+height: 100px;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+
+/* Header with Parallax Effect */
+header.parallax-bg {
+  background-image: url("images/pexels-adonyi-gabor-1414651.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header.parallax-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 24px;
+}
+
+header .btn {
+  font-size: 18px;
+  margin-top: 30px;
+  border-radius: 50px;
+  padding: 15px 40px;
+}
+
+/* Hero Section */
+section.hero {
+  text-align: center;
+}
+
+section.hero h2 {
+  font-size: 36px;
+}
+
+/* Product Categories with Parallax Effect */
+section.parallax-bg {
+  background-image: url("images/vegetables-752153_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+}
+
+section.parallax-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+section.parallax-bg h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+section.parallax-bg .card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Product Listings */
+section.product-listings {
+  text-align: center;
+}
+
+section.product-listings h2 {
+  font-size: 36px;
+}
+
+.product-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.product-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.price {
+  font-size: 24px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 18px;
+}
+
+/* Cart Styling */
+#cart {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 300px;
+  z-index: 999;
+}
+
+#cart h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.cart-item img {
+  max-height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item .item-name {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.cart-item .item-price {
+  font-size: 16px;
+  color: #4CAF50;
+}
+
+.total-price {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.checkout-btn {
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+/* Services Section */
+section.services {
+  position: relative;
+}
+
+.services.parallax-bg {
+  background-image: url("images/pexels-adonyi-gabor-1414651.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.services .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.services h2,
+.services .service-item {
+  color: #fff;
+}
+
+.services .service-item h4,
+.services .service-item p {
+  color: #fff;
+}
+/* Testimonials Section */
+section.testimonials {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.testimonials.parallax-bg {
+  background-image: url("images/pexels-adonyi-gabor-1414651.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonials .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.testimonial-item {
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.testimonial-item img {
+  max-height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-item blockquote {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-item .customer-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Custom Styles */
+
+/* ... Rest of the CSS code goes here ... */
+
+/* Navbar Styles */
+.navbar {
+  transition: all 0.3s;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+}
+
+/* Sticky Navbar */
+.fixed-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Active Menu Item */
+.navbar-nav .nav-item.active .nav-link {
+  color: #007bff;
+}
+
+/* Smooth Scrolling Effect */
+html {
+  scroll-behavior: smooth;
+}
+/* Navbar Styles */
+.navbar {
+  background-color: #fff;
+  border-bottom: 2px solid #f4a261;
+  
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f4a261;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f4a261;
+}
+
+/* Register Now and Sign In Buttons */
+.navbar .btn {
+  font-size: 16px;
+
+  background-color: #f4a261;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .btn:hover {
+  background-color: #e76f51;
+}
+
+/* Search Bar */
+.navbar .form-inline {
+  margin-left: auto;
+}
+
+.navbar .form-control {
+  width: 50px;
+  border: 2px solid #f4a261;
+  border-radius: 25px;
+ 
+  transition: border-color 0.3s ease;
+}
+
+.navbar .form-control:focus {
+  border-color: #e76f51;
+}
+/* Contact Us Section */
+section.contact {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 80px 0;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  margin-bottom: 20px;
+}
+
+.contact form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact form label {
+  font-weight: bold;
+}
+
+.contact form textarea {
+  resize: vertical;
+}
+
+.contact-info h5 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contact-info ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact-info img {
+  max-height: 30px;
+}
+.divider {
+  display: flex;
+  
+  &:before,
+  &:after {
+    content: "";
+    flex: 1;
+  }
+}
+.line {
+  align-items: center;
+  margin: 1em -1em;
+  
+  &:before,
+  &:after {
+    height: 1px;
+    margin: 0 1em;
+  }
+}
+.glow {
+  &:before,
+  &:after {
+     height: 6px;
+    webkit-filter: blur(5px);
+    border-radius: 5px;
+  }
+  
+  &:before {
+    background: linear-gradient(to right, blue, hotpink);
+  }
+  
+  &:after {
+    background: linear-gradient(to left, blue, hotpink);
+  }
+}
+/* ... Rest of the custom CSS goes here ... */

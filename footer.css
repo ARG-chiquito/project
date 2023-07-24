@@ -4,7 +4,7 @@
   font-family: Open Sans;
 }
 
-section {
+.section-footer {
   width: 100%;
   display: inline-block;
   background: #333;
@@ -209,10 +209,7 @@ section {
   justify-content: space-between;
 }
 
-.container {
-    position: relative;
-     width: 50%; 
-  }
+
 
 .image {
   opacity: 1;
@@ -233,20 +230,6 @@ section {
   text-align: center;
 }
 
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #04aa6d;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
 
 /* / logo slider end */ 
 #main_boxi{
