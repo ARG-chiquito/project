@@ -1,4 +1,42 @@
 /* Custom Styles */
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif; /* Replace with your desired font */
+  font-weight: bold;
+/* Adjust the heading color as needed */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
+  letter-spacing: 1px; /* Add some letter spacing for readability */
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.7;
+}
 
 /* Navbar Styles */
 
@@ -35,7 +73,7 @@ header.parallax-bg .overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -79,7 +117,7 @@ section.parallax-bg .overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 section.parallax-bg h2 {
@@ -88,7 +126,7 @@ section.parallax-bg h2 {
 }
 
 section.parallax-bg .card {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
 }
@@ -103,7 +141,7 @@ section.product-listings h2 {
 }
 
 .product-card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -132,10 +170,13 @@ section.product-listings h2 {
   bottom: 30px;
   right: 30px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 15px;
   border-radius: 8px;
   max-width: 300px;
+  max-height: 500px;
+  opacity: 0.9;
+  overflow: scroll;
   z-index: 999;
 }
 
@@ -225,7 +266,7 @@ section.services {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .services h2,
@@ -286,11 +327,9 @@ section.testimonials {
   font-size: 18px;
   font-weight: bold;
 }
-/* Custom Styles */
-
-/* ... Rest of the CSS code goes here ... */
 
 /* Navbar Styles */
+
 .navbar {
   transition: all 0.3s;
 }
@@ -325,14 +364,14 @@ html {
 /* Navbar Styles */
 .navbar {
   background-color: #fff;
-  border-bottom: 2px solid #f4a261;
+  border-bottom: 2px solid #297a2e;
   
 }
 
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
-  color: #f4a261;
+  color: #297a2e;
 }
 
 .navbar-nav {
@@ -351,21 +390,21 @@ html {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #f4a261;
+  color: #1bb456;
 }
 
 /* Register Now and Sign In Buttons */
 .navbar .btn {
   font-size: 16px;
 
-  background-color: #f4a261;
+  background-color: #359548;
   border: none;
   color: #fff;
   transition: background-color 0.3s ease;
 }
 
 .navbar .btn:hover {
-  background-color: #e76f51;
+  background-color: #1bb455;
 }
 
 /* Search Bar */
@@ -469,5 +508,39 @@ section.contact {
   &:after {
     background: linear-gradient(to left, blue, hotpink);
   }
+}
+/* Featured Products Section */
+section#featured-products {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+#featured-products h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
 }
 /* ... Rest of the custom CSS goes here ... */

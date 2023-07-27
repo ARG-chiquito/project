@@ -73,3 +73,11 @@ window.onscroll = function() {
 scrollBtn.addEventListener('click', function() {
   $('html, body').animate({ scrollTop: 0 }, 800);
 });
+$(window).on("scroll", function() {
+  var scrollTop = $(this).scrollTop();
+  if (scrollTop > 100) {
+    $("#navbar").addClass("navbar-scrolled");
+  } else {
+    $("#navbar").removeClass("navbar-scrolled");
+  }
+});
