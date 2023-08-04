@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+
+if (!isset($_SESSION["username"])) {
+    
+    header("Location: signin.html"); 
+    exit();
+}
+
+// Now you can use the username from the session variable
+$username = $_SESSION["username"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,8 +54,7 @@
 
         <!-- Register Now and Sign In Buttons -->
         <div class="d-flex">
-         <a href="signup_html.html"> <button class="btn btn-outline-primary mr-2">Register Now</button></a>
-         <a href="signin.html"><button class="btn btn-primary mr-2">Sign In</button></a>
+        <h2>Welcome, <?php echo $username; ?>!</h2>
         </div>
 
         <!-- Search Bar -->

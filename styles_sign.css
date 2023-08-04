@@ -1,0 +1,46 @@
+/* Custom Styles */
+
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    margin-top: 100px;
+  }
+  
+  .signup-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    color: #e76f51;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-control {
+    border-color: #ddd;
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #e76f51;
+  }
+  
+  .btn-primary {
+    background-color: #e76f51;
+    width: 100%;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ca513e;
+  }
+  
