@@ -20,6 +20,8 @@ $username = $_SESSION["username"];
   <title>Vegetables & Fruits Vending</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRtTuRY4TCuz5U5K40zUJ+8C4S47KS3d+ECPlnX2W" crossorigin="anonymous">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="footer.css">
@@ -55,7 +57,15 @@ $username = $_SESSION["username"];
         <!-- Register Now and Sign In Buttons -->
         <div class="d-flex">
         <h2>Welcome, <?php echo $username; ?>!</h2>
+        <form action="logout.php" method="post">
+        <button type="submit" class="btn btn-danger ml-3">Logout</button>
+        </form>
         </div>
+        <div class="cart-toggle" onclick="toggleCart()">
+  <i class="fas fa-shopping-cart">Cart</i>
+  <span class="cart-count">0</span>
+</div>
+
 
         <!-- Search Bar -->
         
@@ -320,7 +330,7 @@ $username = $_SESSION["username"];
       </div>
     </div>
     <div class="text-center mt-3">
-      <button class="btn btn-primary">Checkout</button>
+      <button class="btn btn-primary" onclick="redirectToCheckout()">Checkout</button>
     </div>
   </div>
   <h2 class="divider line glow" contenteditable></h2>
