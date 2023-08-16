@@ -618,7 +618,7 @@ section#featured-products {
 }
 
 .remove-item:hover {
-  color: red;
+  background-color: red;
 }
 
 

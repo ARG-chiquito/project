@@ -35,9 +35,9 @@ body {
     margin-bottom: 15px;
   }
   
-  .item img {
-    width: 100px;
-    height: 100px;
+  .cart-img {
+    max-height: 50px;
+    object-fit: cover;
     margin-right: 10px;
   }
   

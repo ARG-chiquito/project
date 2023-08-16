@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Raleway:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amita&family=Rajdhani:wght@300&family=Raleway:wght@200&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    
+    
+}
+body{
+    background-image: url("../images/pexels-adonyi-gabor-1414651.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.header{
+    font-family: Raleway;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 18px;
+
+    z-index: 10;
+    width: 100%;
+}
+.header > *{
+    margin:0px 50px;
+}
+#tags{
+    margin-right: 60px;
+}
+#tags>*{
+    margin:0px 20px;
+    text-decoration: none;
+    color:grey
+}
+#logo{
+    background: url("../images//sabjiwala.png");
+    width: 150px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    
+}
+.feedback{
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #d1c7c7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+
+}
+.feedback form{
+    
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.feedback form >*{
+    margin-top: 25px;
+    width:80%;
+    border: 2px;
+    border-radius: 5px;
+    height: auto + 20px;
+}
+.text{
+    margin-top: 25px;
+    width:80%;
+    border: 2px;
+    border-radius: 5px;
+    height: auto + 20px;
+}
+#btn{
+    width:80%;
+    height: 20px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: rgb(68, 195, 68);
+    border:2px solid green;
+}
+.gap{
+    margin-top: 300px;
+}
+.box{
+    margin: auto;
+    width:50%;
+}
+.task{
+    background-color: rgb(247,247,247);
+    font-family: "Raleway";
+    padding:30px;
+    color:rgb(40, 39, 39);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin:2vmax;
+    height: 60px;
+    box-shadow:  0px 0px 7px 3px rgba(101, 100, 100, 1);
+    background-color: aliceblue;
+}
+.task > div{
+    width:100%;
+}
+.task div p{
+    font-weight: 1000;
+    font-size: 26px;
+    position: relative;
+    
+}
+.task div span{
+    font-family: "Rajdhani";
+    font-weight: bold;
+}
+
+.dltbtn{
+    border-radius: 100%;
+    width:30px;
+    
+    font-size: 1.6rem;
+    display: flex;
+    background-color: crimson;
+    cursor: pointer;
+
+}
+.text{
+    display: inline-block;
+    position: relative;
+    top:170px;
+    left:41%;
+    font-family: "Amita";
+    font-weight: 1000;
+    font-size: 42px;
+    color: rgb(75, 68, 68);
+}
+
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 15px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+.footer-section a:hover {
+    color: #ffd700;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #111;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}

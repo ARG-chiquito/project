@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Price Display</title>
+    <!-- Include CSS and JavaScript libraries -->
+    <link rel="stylesheet" href="pricestyle.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Products</a></li>
+                <li><a href="../about.html">About Us</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <div class="container">
+            <img src="main.jpg" alt="background image">
+        </div>
+        <div id="filters">
+            <h2>Price</h2>
+            <label for="username">Item Name:</label>
+  <input type="text" id="itemName" name="products" list="product-list">
+  <datalist id="product-list"></datalist>
+  
+  <script>
+    const productNames = ["Apple Chaina Delicious", "Rumenia Mango", "Mosambi polo", "S.mellon namdhari (Red)", "S.mellon Local (Luck)", "Bore fruit", "Butter fruit", "Anjura/Fig", "Peas seeds", "Bread fruit", "Apple Chilli", "Indian red globe", "Washington red apple", "Tamarind Paste 150 gm", "Rice Bran 5 lt", "Sungold oil 5 lt", "Ground nut oil 5 lt", "Safal deep 500 ml", "Tamarind Paste 450 gm", "Sun safal Tin 15 lt", "Sungold oil 5 lt packet", "Pepper", "Stevia powder", "Coconut oil 500 ml", "Jam 1 kg", "Jam 1/2 kg", "Jam 200 gm", "Jam 100 gm", "Fanda", "Chocolates Drink box", "Kakadi", "Corriander Leave", "Curry leave", "Dhantu greens", "Ginger ooty", "Pomegranate", "Pomegranate Bhagav", "Pomegranate A.raktha", "Pomegranate Ganesh", "Papaya nati", "Papaya Taiwan", "Papaya Red lady", "Papaya sola", "Pineapple", "Plum Ooty", "Plum Australia", "Peaches", "Pomello/Chakotha", "Rose apple", "Rampal", "Tamarind sweet 500gm", "Watermellon", "Watermellon kiran", "S.mellon namdhari", "Mosambi", "Sweet corn", "Sweet corn cleaned", "Sweet corn seeds spok", "Batani kalu", "BaleDindu (Banana stem)", "Basale Greens", "Letteus Greens", "Onion flowers", "Chain Berry", "Y.Bananan T.N.", "Maize", "Byladha Hannu", "Net rich 5 lt oil", "Mineral water 1 lt", "Chikkadikai Round", "Indian kinora apple", "South Africa Gala apple", "Selari", "Leeks", "Parsley", "Litchi Juice", "Apple juice", "G. nut oil Rice 1 lt", "G. nut oil safal deep1 lt", "G. nut Golden oil 1 lt", "G. nut sungold 1 lt", "Rice Bran 15 lt Tin", "Pickles", "Lime Pickles", "mango Pickles", "Pickles mixed veg", "Avarebele (F. Beans spok)", "Avare seed (FB seeds)", "Brucoli", "Mushroom Oyster", "Onion medium", "Onion Big", "Jack fruit", "Indian Black globe Grapes", "Papaya red indian", "Mango", "Mango Badami", "Mango Alphans", "Onion small(Economy)", "Mango Raspuri", "Onion samber", "Peas local", "Peas Delhi", "Berry fruit Ooty", "Berry Soft", "Berry Delhi", "Ber fruit/Bore fruit", "Cherry fruit", "Cherry kashmir", "Cashew nut", "Dates", "Dry dates", "Dates seedless", "Dry apricot", "Badami", "Dry fruit mixed", "Jambo fruit(Nerale)", "Bottle Gourd", "Chow-Chow", "Cucumber", "Cucumber Nati", "Cucumber Israle", "Cucumber Ooty", "Mangalore cucumber", "Cluster Bean Local", "Capsicum", "Mango Sendura", "Mango Bygan palli", "Mango malagova", "Mango mallika", "Mango thotapuri", "Mango kalapadu", "Mango Neelam", "Mango Dasheri", "Mango Langada", "Mango Kesar", "Mango Amarpalli", "Mango rathnagiri(red)", "Mango Alphans box", "Mango sakkaregutti", "Orange", "Orange Nagpura", "Orange Ooty", "Orange Australia", "Tomoto", "Thogari kai", "Mango Raw Amblet", "Mango Raw", "Capsicum 1", "Capsicum Red/Yellow", "Chillies Green", "Chillies Bajji", "Chillies Cleaned", "Chillies small (C.B.P)", "Carrot ooty", "Carrot Delhi", "Carrot Nati", "Cowpea Local", "Cowpea Long", "Coconut (B)", "Coconut (M)", "Coconut (S)", "Coconut (OS)", "Cabbage", "Cabbage Red", "Cabbage chaina", "Cauliflower(B)", "Copra", "Honney 1/2", "Honney 1 Kg", "Honney 200 gm", "Honney 100 gm", "Gulkan 1 kg", "Gulkan 1/2 kg", "Gulkan 1/4 kg", "Cluster Beans Bunches", "Cucumber white", "Kashini (Ganike) Greens", "Sweet corn seeds", "Bale hoovu(B.flower)", "Jukani", "Banana cooking R.Banana", "Avarekai (Field Beans )", "Grapes T.S.", "Herali kai", "Ladys finger", "Little gourd", "Lime Local", "Grapes Red globe", "Grapes Dry 250gm", "Grapes Dry 100gm", "Lime Bijapur", "Mushroom Button", "Mushroom Milky", "Cauliflower(M)", "Cauliflower(S)", "Cauliflower per Kg", "Cherry Tomoto", "Drumstik", "Double Beans seeds", "Double Beans", "Ground nut Local", "Ground nut Hybrid", "Ginger", "Ginger New", "Garlic", "Garlic cleaned", "Chikadi kai", "knol-khol", "Arive greens", "Eggs", "Chakota greens", "Onion pack", "Potato pack", "Chilakarive green", "Chillies Bajji yagani", "Baby corn", "Baby corn cleaned", "Berry Southafrica", "Berry Golden", "Berry ball", "Berry Green", "Apple Premium", "Malenian apple", "Nagapur Orange Economy", "South Af.red berry", "Jumbu juice", "Brahmi amla juice", "Pomegranate Juice", "N.Juice 200 ml", "Amla", "Beans", "Beans Nati", "Beans Ring", "Beans Fruit", "Beans cleaned", "Brinjal long", "Brinjal (W)", "Brinjal (R)", "Brinjal Bottle", "Brinjal Mlore", "Beet Root", "Yam/S.Root", "Bitter Gourd", "Mint Leaves", "Menthya Greens", "Palak Greens", "Apple Delicious", "Apple Simla", "Apple Economy", "Apple Washington", "Apple Australia", "Apple Newzeland", "Apple Fuji chaina", "Apple hazarath palli", "Apple Green smith", "Apple Golden delicious", "Banana pachabale", "Banana Yellaki", "Banana chandra", "Banana Nendra", "Banana karpura", "Banana Rasabale", "Chicco(Sapota) rapined", "Custerd Apple", "Chicco(Sapota)", "Guava", "Guava Allahabad(Red)", "Grapes Blore blue", "Orange malt", "Orange South Africa", "Peas Dharwad", "Peas Ooty", "Pumpkin Ash", "Pumpkin Red", "Pumpkin Japan", "Potato(M)", "Potato(B)", "Potato(S)", "Potato Baby", "Sweet Potato(Genasu)", "Raddish", "Raddish Red", "Sponge Gourd", "Snake Gourd", "Snake Gourd(S)", "Sham gadde", "Spring Onion", "Spring Onion(Cleaned)", "Parvala", "Greens Sabbakki", "Molake kalu", "Hesaru kalu", "GrapesAnabi shahi", "Grapes Dilkush", "Grapes Sharad", "Grapes Rose", "Grapes Sonika", "Grapes Flame", "Grapes Krishna sharad", "Grapes Crimson", "Komark fruit", "Kiwi fruit", "Litchi Local", "Litchi Taiwan/chaina", "Straw Berry", "Tender Coconut", "Tender Coconut(M)", "Tamrind Chatisghar", "Tamarind seedless", "Thinda", "Dates Arebian", "Pista", "Tender Coconut(S)", "Tender Coco packed", "Fruit Juice Tailand", "G.oil Net rich 500 ml", "Ground nut oil 1 lt", "G.nut oil Premium1 lt", "G.nut oil Rice Bron 1 lt"];
+
+    const datalist = document.getElementById("product-list");
+
+    productNames.forEach(productName => {
+      const option = document.createElement("option");
+      option.value = productName;
+      datalist.appendChild(option);
+    });
+  </script>
+            <label for="username">Date:</label>
+            <input type="date" id="inputDate">
+            <button id="fetchPrice">Fetch Price</button>
+            <br>
+            <div id="priceContainer">
+                <!-- The price will be displayed here -->
+            </div>
+        </div>
+        <div id="priceContainer">
+            <!-- The price will be displayed here -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hello!!!!</h3>
+                <p>Sanbziwala is dedicated to providing you with the freshest and highest quality vegetables sourced directly from local farms.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#product-categories">Shop</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@sanbziwala.com</p>
+                <p>Phone: 98765-43210</p>
+                <p>Address: Clement Town, Dehradun</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Sanbziwala. All rights reserved.</p>
+        </div>
+    </footer> 
+
+    <script src="java.js"></script>
+</body>
+
+</html>

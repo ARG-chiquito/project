@@ -8,7 +8,7 @@
     <h1>Checkout</h1>
   </header>
 
-  <section class="cart-items">
+  <section class="cart-items items">
     <h2>Your Cart</h2>
     <ul>
       <!-- Display cart items using JavaScript -->
@@ -35,7 +35,7 @@
     cartItems.forEach(item => {
       const listItem = document.createElement('li');
       listItem.innerHTML = `
-        <img src="${item.imageUrl}" alt="${item.name}">
+        <img src="${item.imageUrl}" alt="${item.name}" class="cart-img">
         <div class="item-details">
           <p>${item.name}</p>
           <p>Price: Rs.${item.price.toFixed(2)}</p>

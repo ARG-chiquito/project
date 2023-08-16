@@ -7,7 +7,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRtTuRY4TCuz5U5K40zUJ+8C4S47KS3d+ECPlnX2W" crossorigin="anonymous">
-
+  <script src="https://kit.fontawesome.com/e3350104d5.js" crossorigin="anonymous"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="footer.css">
@@ -27,16 +27,16 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="about.html">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#testimonials">Testimonials</a>
+            <a class="nav-link" href="price/price_before.html">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#designers">Our Designers</a>
+            <a class="nav-link" href="index.html#product-categories">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
+            <a class="nav-link" href="index.html#contact">Contact Us</a>
           </li>
         </ul>
 
@@ -44,6 +44,9 @@
         <div class="d-flex">
          <a href="signup_html.html"> <button class="btn btn-outline-primary mr-2">Register Now</button></a>
          <a href="signin.html"><button class="btn btn-primary mr-2">Sign In</button></a>
+  </div>
+  <span onclick="toggleCart()" ><i class="fa-solid fa-cart-shopping fa-bounce fa-3x" style="color: #008040;"><span class="cart-count">0</span></i> </span>
+ 
         </div>
 
         <!-- Search Bar -->
@@ -192,7 +195,6 @@
       </div>
     </section>
     
-    <!-- Product Listings Section -->
     <section class="product-listings py-5">
       <h2 class="text-center mb-4" id="vegetables">Vegetables</h2>
       <br>
@@ -210,6 +212,8 @@
           </div>
           
         </div>
+
+
         <!-- Add more vegetable listings here -->
         <div class="col-md-3">
             <div class="card product-card">
@@ -223,12 +227,100 @@
             </div>
             </div>
             <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/kohlrabi.jpeg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Kohlrabi</h5>
+                <p class="card-text">Kohlrabi is a nutritious and versatile vegetable, known for its crunchy texture and mild, slightly sweet flavor, often enjoyed raw in salads or cooked in various dishes..</p>
+                <span class="price">Rs.59/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('kohlrabi', 59, 'images/kohlrabi.jpeg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/turnips.jpeg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Turnips</h5>
+                <p class="card-text">Turnips are a root vegetable with a distinct earthy flavor, offering a good source of fiber, vitamins, and minerals, and they can be cooked, mashed, or added to soups for a hearty and nutritious meal.</p>
+                <span class="price">Rs.79/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('turnips', 79, 'images/turnips.jpeg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/potato.jpeg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Potatoes</h5>
+                <p class="card-text">Potatoes are a starchy staple, rich in carbohydrates, vitamin C, and potassium, providing energy and supporting immune function, while their versatility makes them a popular ingredient in countless dishes worldwide.</p>
+                <span class="price">Rs.20/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('Potato', 20, 'images/potato.jpeg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/peas.jpg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Peas</h5>
+                <p class="card-text">Peas are a small yet mighty vegetable, brimming with fiber, vitamins, and protein, enhancing digestion and contributing to overall health, often enjoyed as a side dish or incorporated into various recipes.</p>
+                <span class="price">Rs.40/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('peas', 40, 'images/peas.jpg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/radish.jpeg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Radish</h5>
+                <p class="card-text">Radish is a root vegetable with a sharp and peppery flavor, offering a good source of vitamins, fiber, and antioxidants, promoting digestion and adding a delightful crunch to salads and other dishes.</p>
+                <span class="price">Rs.30/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('radish', 30, 'images/radish.jpeg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/spinach.jpeg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Spinach</h5>
+                <p class="card-text">Spinach is a leafy green vegetable that's packed with nutrients like iron, vitamins, and antioxidants, contributing to strong bones and overall health, commonly used in salads, smoothies, and various cooked dishes.</p>
+                <span class="price">Rs.50/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('spinach', 50, 'images/spinach.jpeg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/cabbage.jpeg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Cabbage</h5>
+                <p class="card-text">Cabbage is a leafy vegetable, known for its versatility and high nutritional content, including vitamins, fiber, and antioxidants, making it a valuable addition to various cuisines and diets.</p>
+                <span class="price">Rs.40/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('cabbage', 40, 'images/cabbage.jpeg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/jicama.jpeg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Jicama</h5>
+                <p class="card-text">Jicama is a nutrient-rich root vegetable with a crisp and refreshing texture, often enjoyed raw in salads or as a crunchy snack, providing a good source of dietary fiber and essential vitamins.</p>
+                <span class="price">Rs.100/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('jicama', 100, 'images/jicama.jpeg');">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3">
                 <div class="card product-card">
                   <img src="images/onion_0.png" class="card-img-top" alt="Vegetable 1">
                   <div class="card-body">
                     <h5 class="card-title">Onion</h5>
                     <p class="card-text">Onions are a versatile vegetable that adds flavor to a wide range of dishes and provides health benefits, including being rich in antioxidants, vitamin C, and fiber, which can support the immune system, heart health, and digestive function.</p>
-                    <span class="price">Rs.25/kg</span>
+                    <span class="price">Rs.40/kg</span>
                     <button class="btn btn-success btn-block mt-3" onclick="addToCart('Onion', 25, 'images/onion_0.png');">Add to Cart</button>
                   </div>
                 </div>
@@ -238,14 +330,62 @@
                       <img src="images/gourd_0.png" class="card-img-top" alt="Vegetable 1">
                       <div class="card-body">
                         <h5 class="card-title">Pumpkin</h5>
-                        <p class="card-text">Gourds are low in calories and rich in nutrients like vitamin C, vitamin A, and dietary fiber.</p>
+                        <p class="card-text">Pumpkin, a nutritious and vibrant orange vegetable, is rich in vitamins, fiber, and antioxidants, supporting eye health and immune function, and commonly used in both savory and sweet recipes.</p>
                         <span class="price">Rs.60/kg</span>
                         <button class="btn btn-success btn-block mt-3" onclick="addToCart('Pumpkin', 60, 'images/gourd_0.png');">Add to Cart</button>
                       </div>
                     </div>
                     </div>
-                
+                    <div class="col-md-3">
+            <div class="card product-card">
+              <img src="images/mushroom.jpg" class="card-img-top" alt="Vegetable 1">
+              <div class="card-body">
+                <h5 class="card-title">Mushroom</h5>
+                <p class="card-text">Mushrooms are a unique and versatile fungus, low in calories and fat, yet rich in vitamins, minerals, and antioxidants, contributing to immune support and overall well-being, often included in various culinary dishes.</p>
+                <span class="price">Rs.200/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('Mushroom', 200, 'images/mushroom.jpg');">Add to Cart</button>
+              </div>
+            </div>
+           
+            </div>
+
+            <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/bhindi.jpg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Ladyfinger</h5>
+                        <p class="card-text"> Ladyfinger, also known as okra, is a green vegetable with a distinct texture often used in soups and stews. It's a good source of dietary fiber, vitamins, and minerals, aiding digestion and promoting a healthy gut.</p>
+                        <span class="price">Rs.60/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('Ladyfinger', 60, 'images/bhindi.jpg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/asparagus.jpeg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Asparagus</h5>
+                        <p class="card-text">   Asparagus, a slender and nutrient-packed vegetable, is rich in vitamins, minerals, and antioxidants, supporting healthy digestion and contributing to heart health, commonly enjoyed roasted, grilled, or as part of various dishes.</p>
+                        <span class="price">Rs.80/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('asparagus', 80, 'images/asparagus.jpeg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/celery.jpeg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">celery</h5>
+                        <p class="card-text">    Celery is a crunchy and hydrating vegetable, low in calories and rich in dietary fiber, vitamins, and antioxidants, known for its potential to aid in digestion and promote overall health, often used as a snack or ingredient in recipes.</p>
+                        <span class="price">Rs.70/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('celery', 70, 'images/celery.jpeg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
       </div>
+      
       <h2 class="divider line glow" contenteditable></h2>
       <h2 class="text-center mt-4" id="fruits">Fruits</h2>
       <br>
@@ -268,8 +408,8 @@
               <div class="card-body">
                 <h5 class="card-title">Tomato</h5>
                 <p class="card-text">Tomatoes are a nutritious fruit that is commonly used as a vegetable in cooking. They are an excellent source of vitamins C and K, as well as potassium and antioxidants like lycopene. </p>
-                <span class="price">Rs.100/kg</span>
-                <button class="btn btn-success btn-block mt-3" onclick="addToCart('Tomato', 100, 'images/tomato_1.png');">Add to Cart</button>
+                <span class="price">Rs.200/kg</span>
+                <button class="btn btn-success btn-block mt-3" onclick="addToCart('Tomato', 200, 'images/tomato_1.png');">Add to Cart</button>
               </div>
             </div>
             </div>
@@ -295,6 +435,108 @@
                       </div>
                     </div>
                     </div>
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/cherry.jpeg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">cherry</h5>
+                        <p class="card-text">Cherries are a delicious and nutritious source of vitamins, offering a burst of antioxidants and essential nutrients in every bite.</p>
+                        <span class="price">Rs.300/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('cherry', 300, 'images/cherry.jpeg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/kiwi.jpeg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Kiwi</h5>
+                        <p class="card-text">  Kiwi is a vibrant and vitamin-rich fruit, packed with a refreshing tanginess that provides a boost of immune-boosting nutrients and fiber.</p>
+                        <span class="price">Rs.400/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('kiwi', 400, 'images/kiwi.jpeg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/litchi.jpeg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">litchi</h5>
+                        <p class="card-text"> 
+Lychee, with its sweet and fragrant flesh, is a tropical fruit that offers a juicy and vitamin C-rich treat, supporting both hydration and skin health.</p>
+                        <span class="price">Rs.100/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('Litchi', 100, 'images/litchi.jpeg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/grapes.jpg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Grapes</h5>
+                        <p class="card-text"> 
+                        Grapes, both delicious and nutritious, are a great natural source of antioxidants and vitamins, contributing to heart health and a balanced diet.</p>
+                        <span class="price">Rs.160/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('Grapes', 160, 'images/grapes.jpg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/avocado 1.png" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Avovado</h5>
+                        <p class="card-text"> 
+                        Avocado is a creamy and nutritious fruit, abundant in healthy fats, vitamins, and minerals, promoting heart health and offering various benefits for skin and overall well-being, frequently enjoyed in salads, spreads, and as a topping.</p>
+                        <span class="price">Rs.150/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('avocado', 150, 'images/avocado 1.png');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/Strawberry.png" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Strawberreies</h5>
+                        <p class="card-text"> 
+                        Strawberries are vibrant and vitamin-packed berries, loaded with antioxidants and fiber, supporting immune function and skin health, commonly enjoyed as a sweet and nutritious treat or added to a variety of dishes.</p>
+                        <span class="price">Rs.200/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('Strawberry', 200, 'images/Strawberry.png');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/pineaple.jpg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Pineapple</h5>
+                        <p class="card-text"> 
+                        Pineapple is a juicy and tropical fruit, brimming with vitamin C and enzymes that aid digestion, contributing to immune support and vibrant skin, often enjoyed fresh, in smoothies, or as a sweet addition to dishes.</p>
+                        <span class="price">Rs.160/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('Pineapple', 160, 'images/pineaple.jpg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card product-card">
+                      <img src="images/guavava.jpg" class="card-img-top" alt="Vegetable 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Guava</h5>
+                        <p class="card-text"> 
+                        Guava is a tropical fruit known for its fragrant aroma and sweet taste, offering a rich source of vitamin C, dietary fiber, and antioxidants, supporting immune health and digestion, and often enjoyed fresh or used in various culinary creations.</p>
+                        <span class="price">Rs.80/kg</span>
+                        <button class="btn btn-success btn-block mt-3" onclick="addToCart('Guava', 80, 'images/guavava.jpg');">Add to Cart</button>
+                      </div>
+                    </div>
+                    </div>
+
+
         <!-- Add more fruit listings here -->
       </div>
     </section>
