@@ -21,7 +21,10 @@ $username = $_SESSION["username"];
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRtTuRY4TCuz5U5K40zUJ+8C4S47KS3d+ECPlnX2W" crossorigin="anonymous">
-   <script src="https://kit.fontawesome.com/e3350104d5.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e3350104d5.js" crossorigin="anonymous"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="footer.css">
