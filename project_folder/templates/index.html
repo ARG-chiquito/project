@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Vegetable Price Predictor</h1>
+    <form id="prediction-form">
+        <label for="vegetable">Select Vegetable:</label>
+        <select id="vegetable" name="vegetable">
+            <option value="1">Cabbage</option>
+            <option value="2">Radish</option>
+            <option value="3">Potato</option>
+            <option value="4">Tomato</option>
+            <option value="5">Peas</option>
+            <option value="6">Pumpkin</option>
+            <option value="7">Cucumber</option>
+            <option value="8">Pointed Gourd</option>
+            <option value="9">Raddish</option>
+            <option value="10">Bitter Gourd</option>
+            <option value="11">Onion</option>
+            <option value="12">Ginger</option>
+            <option value="13">Garlic</option>
+            <option value="14">Cauliflower</option>
+            <option value="15">Brinjal</option>
+            <option value="16">Okra</option>
+            <option value="17">Chilly</option>
+        </select><br>
+        
+        <label for="season">Select Season:</label>
+        <select id="season" name="season">
+            <option value="0">Winter</option>
+            <option value="1">Summer</option>
+            <option value="2">Spring</option>
+            <option value="3">Autumn</option>
+            <option value="4">Monsoon</option>
+        </select><br>
+        
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" name="temperature"><br>
+        
+        <label for="month">Select Month:</label>
+        <input type="number" id="month" name="month"><br>
+        
+        <label for="vegcondition">Vegetable Condition:</label>
+        <select id="vegcondition" name="vegcondition">
+            <option value="0">Fresh</option>
+            <option value="1">Average</option>
+            <option value="2">Scrap</option>
+        </select><br>
+        
+        <label for="disaster">Disaster in Last 3 Months:</label>
+        <select id="disaster" name="disaster">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+
+        <div id="prediction-result"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#prediction-form").submit(function (e) {
+                e.preventDefault();
+                const formData = {
+                    Vegetable: $("#vegetable").val(),
+                    Season: $("#season").val(),
+                    Month: $("#month").val(),
+                    Temp: $("#temperature").val(),
+                    Desaster_Happen_in_last_3month: $("#disaster").val(),
+                    Vegetable_condition: $("#vegcondition").val()
+                    
+                };
+
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "/predict",
+                    data: JSON.stringify(formData),
+                    dataType: "json",
+                    success: function (data) {
+                        $("#prediction-result").html("Predicted Average Price: " + data.predicted_price);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -102,7 +102,7 @@ function redirectToCheckout() {
   const serializedCart = encodeURIComponent(JSON.stringify(cartItems));
   
   // Redirect to the checkout page with cart data in URL parameter
-  window.location.href = `checkout.html?items=${serializedCart}`;
+  window.location.href = `checkout/abc.html?items=${serializedCart}`;
 }
 
 // Scroll to top button

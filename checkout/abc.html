@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_abc.css">
+    <title>Checkout Page</title>
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Sabzi Wala</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index_after_signin.php">Home</a></li>
+                <li><a href="../index_after_signin.php#products">Products</a></li>
+                <li><a href="../about_after.html">About</a></li>
+                <li><a href="../index_after_signin.php#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="cart-items items">
+        <h2>Your Cart</h2>
+        <ul>
+          <!-- Display cart items using JavaScript -->
+        </ul>
+        <a href="#" onclick="        window.history.back();
+        ">Back to Cart</a>
+      </section>
+
+    <div class="checkout-container">
+        <h2>Total Amount: Rs.<span id="total-amount"></span></h2>
+        <form id="checkout-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="abcd@xyzz.com">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="credit">Credit Card</option>
+                <option value="bank">Bank Transfer</option>
+                <option value="google">Google Pay</option>
+            </select>
+
+            <div id="credit-card-details" class="hidden">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" 
+                       pattern="[0-9]{16,19}" title="Enter a valid credit card number (16 to 19 digits)" required>
+
+                <label for="expiration">Expiration Date:</label>
+                <input type="month" id="expiration" name="expiration" required><br><br>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" title="Enter a valid CVV (3 to 4 digits)" required>
+            </div>
+
+            <div id="bank-details" class="hidden">
+                <p>Please make the payment to the following bank account:</p>
+                <p>Bank: ICICI bank</p>
+                <p>Account Number: 123456789</p>
+                <p>Account Holder: Sabzi Wala</p>
+                <label for="payment-id">Enter Payment ID:</label>
+                <input type="text" id="payment-id" name="payment-id">
+            </div>
+
+            <div id="otp-section" class="hidden">
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" name="otp" pattern="[0-9]{4}" title="Enter a valid OTP (4 digits)" required>
+            </div>
+
+            <button type="submit" id="submit-button">Place Order</button>
+        </form>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const cartItems = JSON.parse(decodeURIComponent(urlParams.get('items')));
+    
+        // Display cart items and calculate total price
+        const cartContainer = document.querySelector('.cart-items ul');
+        let totalPrice = 0;
+    
+        cartItems.forEach(item => {
+  const listItem = document.createElement('li');
+  listItem.innerHTML = `
+    <img src="../${item.imageUrl}" alt="${item.name}" class="cart-img">
+    <div class="item-details">
+      <p>${item.name}</p>
+      <p>Quantity: ${item.quantity}</p>
+      <p>Price: Rs.${item.price.toFixed(2)}</p>
+    </div>
+  `;
+  cartContainer.appendChild(listItem);
+  totalPrice += item.price * item.quantity;
+});
+        // Update total price
+        const totalContainer = document.createElement('p');
+        totalContainer.textContent = `Total Price: Rs.${totalPrice.toFixed(2)}`;
+        document.querySelector('.cart-items').appendChild(totalContainer);
+        // ...
+      </script>
+      
+    <script src="abc_js.js"></script>
+</body>
+</html>

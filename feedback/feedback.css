@@ -1,217 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Raleway:wght@200&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Amita&family=Rajdhani:wght@300&family=Raleway:wght@200&display=swap');
-
-*{
-    margin:0;
-    padding:0;
-    overflow-x: hidden;
-    
-    
-}
-body{
-    background-image: url("../images/pexels-adonyi-gabor-1414651.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-}
-.header{
-    font-family: Raleway;
-    background-color: white;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 18px;
+    min-height: 100vh;
+}
 
-    z-index: 10;
-    width: 100%;
-}
-.header > *{
-    margin:0px 50px;
-}
-#tags{
-    margin-right: 60px;
-}
-#tags>*{
-    margin:0px 20px;
-    text-decoration: none;
-    color:grey
-}
-#logo{
-    background: url("../images//sabjiwala.png");
-    width: 150px;
-    height: 100px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    
-}
-.feedback{
-    max-width: 400px;
-    margin: 100px auto;
+.feedback-container {
+    background-color: #fff;
     padding: 20px;
-    background-color: #d1c7c7;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    opacity: 0.9;
-
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
 }
-.feedback form{
-    
+
+.feedback-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.feedback-container form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.feedback-container form input,
+.feedback-container form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.feedback form >*{
-    margin-top: 25px;
-    width:80%;
-    border: 2px;
+
+.feedback-container form button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    height: auto + 20px;
-}
-.text{
-    margin-top: 25px;
-    width:80%;
-    border: 2px;
-    border-radius: 5px;
-    height: auto + 20px;
-}
-#btn{
-    width:80%;
-    height: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-#btn:hover{
-    background-color: rgb(68, 195, 68);
-    border:2px solid green;
+
+.feedback-container form button:hover {
+    background-color: #0056b3;
 }
-.gap{
-    margin-top: 300px;
-}
-.box{
-    margin: auto;
-    width:50%;
-}
-.task{
-    background-color: rgb(247,247,247);
-    font-family: "Raleway";
-    padding:30px;
-    color:rgb(40, 39, 39);
+.navbar {
+    transition: all 0.3s;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+  
+  /* Sticky Navbar */
+  .fixed-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Active Menu Item */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #007bff;
+  }
+  
+  /* Smooth Scrolling Effect */
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Navbar Styles */
+  .navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #297a2e;
+    
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #297a2e;
+  }
+  
+  .navbar-nav {
     display: flex;
     align-items: center;
-    border-radius: 20px;
-    margin:2vmax;
-    height: 60px;
-    box-shadow:  0px 0px 7px 3px rgba(101, 100, 100, 1);
-    background-color: aliceblue;
-}
-.task > div{
-    width:100%;
-}
-.task div p{
-    font-weight: 1000;
-    font-size: 26px;
-    position: relative;
+  }
+  
+  .navbar-nav .nav-item {
     
-}
-.task div span{
-    font-family: "Rajdhani";
-    font-weight: bold;
-}
-
-.dltbtn{
-    border-radius: 100%;
-    width:30px;
-    
-    font-size: 1.6rem;
-    display: flex;
-    background-color: crimson;
-    cursor: pointer;
-
-}
-.text{
-    display: inline-block;
-    position: relative;
-    top:170px;
-    left:41%;
-    font-family: "Amita";
-    font-weight: 1000;
-    font-size: 42px;
-    color: rgb(75, 68, 68);
-}
-
-
-.footer {
-    background-color: #222;
-    color: #fff;
-    padding: 50px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-section {
-    flex: 1;
-    margin-right: 40px;
-}
-
-.footer-section h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #ffd700;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 15px;
-}
-
-.footer-section a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    color: #444;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #1bb456;
+  }
+  
+  /* Register Now and Sign In Buttons */
+  .navbar .btn {
     font-size: 16px;
-}
-
-.footer-section a:hover {
-    color: #ffd700;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 30px 0;
-    background-color: #111;
-}
-
-.footer-bottom p {
-    font-size: 14px;
+  
+    background-color: #359548;
+    border: none;
     color: #fff;
-    margin: 0;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-section {
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .btn:hover {
+    background-color: #1bb455;
+  }
+  
+  /* Search Bar */
+  .navbar .form-inline {
+    margin-left: auto;
+  }
+  
+  .navbar .form-control {
+    width: 50px;
+    border: 2px solid #f4a261;
+    border-radius: 25px;
+   
+    transition: border-color 0.3s ease;
+  }
+  
+  .navbar .form-control:focus {
+    border-color: #e76f51;
+  }
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    position: relative;
+  background: url(../images/sabjiwala.png);
+  border-radius: 50%;
+  width: 150px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+  

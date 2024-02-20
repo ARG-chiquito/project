@@ -1,94 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="feedback.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="feedback.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRtTuRY4TCuz5U5K40zUJ+8C4S47KS3d+ECPlnX2W" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+  <title>Feedback</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../images/pexels-adonyi-gabor-1414651.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Rest of your CSS styles remain the same */
+
+
+    .container1 {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      width: 80%;
+      max-width: 500px;
+      margin-top: 120px;
+      opacity: 0.9;
+    }
+    h1, h2, h3, h4, h5, h6 {
+  
+  font-weight: bold;
+  font-family: 'Handlee', cursive;
+/* Adjust the heading color as needed */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Add a subtle text shadow */
+  letter-spacing: 1px; /* Add some letter spacing for readability */
+}
+p{
+  font-family: 'Patrick Hand', cursive;
+  
+}
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-family: 'Handlee', cursive;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input[type="text"], textarea {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 150px;
+      width: 80%;
+    }
+
+    button {
+      background-color: #ff8c00;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #e64a19;
+    }
+  </style>
+   <script>
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const feedback = document.getElementById('feedback').value;
+
+      if (name.trim() === '') {
+        alert('Please enter your name.');
+        return false;
+      }
+
+      if (email.trim() === '' || !isValidEmail(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+
+      if (feedback.trim() === '') {
+        alert('Please provide your feedback.');
+        return false;
+      }
+
+      return true;
+    }
+
+    function isValidEmail(email) {
+      const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return pattern.test(email);
+    }
+  </script>
 </head>
 <body>
-    <div class="container">
-        
-        <div class="header">
-            <div id="logo"></div>
-            <div id="tags">
-                <a href="../index_after_signin.php">Home</a>
-                <a href="../about_after.html">About</a>
-                <a href="/index_after_signin.php#contacts">Contacts</a>
-            </div>
-        </div>
-        <div class="text">FEEDBACK</div>
-        <div class="feedback">
-            
-            <form action="">
-                <input type="text" id="name" placeholder="Name" required>
-                <textarea name="" id="feedback" cols="20" rows="7" placeholder="Feedback" required></textarea>
-                <button id="btn">Submit</button>
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index_after_signin.php"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="../index_after_signin.php">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../about_after.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index_after_signin.php#product-categories">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../price/price.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../feedback/feedback.html">FeedBack</a>
+              </li>
+            </ul>
+    
+            <!-- Register Now and Sign In Buttons -->
+            <div class="d-flex">
+            <h2>Welcome, <?php echo $username; ?>!</h2>
+            <form action="signin.html" method="post">
+            <button type="submit" class="btn btn-danger ml-3">Logout</button>
             </form>
-        </div>
-        <div class="gap"></div>
-        <!-- <div class="box">
-            <div class="task">
-                <div>
-                    <p>Priyanshu</p>
-                    <span>Feedback</span>
-                </div>
-                <button class="dltbtn">-</button>
-            </div>
-            <div class="task">
-                <div>
-                    <p>Priyanshu</p>
-                    <span>Feedback</span>
-                </div>
-                <button class="dltbtn">-</button>
-            </div>
-            <div class="task">
-                <div>
-                    <p>Priyanshu</p>
-                    <span>Feedback</span>
-                </div>
-                <button class="dltbtn">-</button>
             </div>
             
-        </div> -->
-        
-
-
-
-
+   
     </div>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Hello!!!!</h3>
-                <p>Sanbziwala is dedicated to providing you with the freshest and highest quality vegetables sourced directly from local farms.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index_after_signin.php">Home</a></li>
-                    <li><a href="../index_after_signin.php#product-categories">Shop</a></li>
-                    <li><a href="../about_after.html">About Us</a></li>
-                    <li><a href="../index_after_signin.php#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: info@sanbziwala.com</p>
-                <p>Phone: 98765-43210</p>
-                <p>Address: Clement Town, Dehradun</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
+    
+    
+            <!-- Search Bar -->
+            
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Sanbziwala. All rights reserved.</p>
-        </div>
-    </footer> 
-    <script src="feedback.js"></script>
+      </nav>
+    
+  <div class="container1">
+    <h1>Provide Your Feedback</h1>
+    <form action="submit_feedback.php" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Your Email</label>
+      <input type="text" id="email" name="email" required>
+      
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" name="feedback" required></textarea>
+      
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <div id="thankYou" style="display: none; text-align: center; margin-top: 20px;">
+        <h2>Thank you for your feedback!</h2>
+        <p>Your valuable input helps us improve our service.</p>
+      </div>
+  </div>
 </body>
 </html>
